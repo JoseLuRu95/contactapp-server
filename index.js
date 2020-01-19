@@ -11,7 +11,7 @@ const DB_URL = "mongodb+srv://JoseLuRu95:1234@cluster0-nwvg7.mongodb.net/test?re
 app.set("port", process.env.PORT || PORT);
 
 //MIDDLEWARE
-app.use("*", cors());
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
