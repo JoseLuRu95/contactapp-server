@@ -26,10 +26,9 @@ mongoose
       useFindAndModify: false,
       useUnifiedTopology: true
    })
-   .then((db) => console.log("DB is connected"))
    .catch((err) => console.log(err));
 
 //START SERVER
 app.listen(app.get("port"), () => {
-   console.log(`Server started on ${port}`);
+   console.log(`Server started`);
 });
