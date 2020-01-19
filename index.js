@@ -5,10 +5,10 @@ const path = require("path");
 const morgan = require("morgan");
 
 const app = express();
-const PORT = 3000;
+const PORT_ = 3000;
 const DB_URL = "mongodb+srv://JoseLuRu95:1234@cluster0-nwvg7.mongodb.net/test?retryWrites=true&w=majority";
 
-app.set("port", process.env.PORT || PORT);
+app.set("port", process.env.PORT || PORT_);
 
 //MIDDLEWARE
 app.use(cors());
@@ -31,5 +31,5 @@ mongoose
 
 //START SERVER
 app.listen(app.get("port"), () => {
-   console.log(`Server started on ${PORT}`);
+   console.log(`Server started on ${port}`);
 });
