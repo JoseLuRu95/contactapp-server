@@ -16,9 +16,9 @@ app.use(cors());
 
 //ROUTES
 app.use("/api", require("./routes/contacts.route"));
+app.get("/", (req, res) => res.send("Page not found"));
 //STATIC FILES
 app.use("/public", express.static(path.resolve("public")));
-
 
 async function main() {
    //CONECT DATABASE
