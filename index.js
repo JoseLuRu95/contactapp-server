@@ -19,22 +19,9 @@ app.use("/api", require("./routes/contacts.route"));
 //STATIC FILES
 app.use("/public", express.static(path.resolve("public")));
 
-//CONECT DATABASE
-mongoose
-   .connect(DB_URL, {
-      useNewUrlParser: true,
-      useFindAndModify: false,
-      useUnifiedTopology: true
-   })
-   .catch((err) => console.log(err));
-
-//START SERVER
-
-app.listen(app.get("port"), () => {
-   console.log(`Server started`);
-});
 
 async function main() {
+   //CONECT DATABASE
    await mongoose
       .connect(DB_URL, {
          useNewUrlParser: true,
@@ -44,7 +31,6 @@ async function main() {
       .catch((err) => console.log(err));
 
    //START SERVER
-
    app.listen(app.get("port"), () => {
       console.log(`Server started`);
    });
