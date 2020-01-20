@@ -11,12 +11,12 @@ const DB_URL = "mongodb+srv://JoseLuRu95:1234@cluster0-nwvg7.mongodb.net/test?re
 app.set("port", process.env.PORT || PORT_);
 
 //MIDDLEWARE
-app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(cors());
 
 //ROUTES
-app.use("/api", require("./routes/contacts.route"));
+app.use("/", require("./routes/contacts.route"));
 //STATIC FILES
 app.use(express.static(path.basename(__dirname, "public")));
 //CONECT DATABASE
