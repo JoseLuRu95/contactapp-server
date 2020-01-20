@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(cors());
 
 //ROUTES
-app.use("/api", require("./routes/contacts.route"));
+app.use("/api", require("../routes/contacts.route"));
 //STATIC FILES
-app.use(express.static(__dirname));
+app.use("/public", express.static(path.resolve("public")));
 
 //CONECT DATABASE
 mongoose

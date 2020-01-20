@@ -3,5 +3,6 @@
       "/api/": {
          "origin": "https://contactsapp-joseluru95.herokuapp.com/"
       }
-   }
+   },
+   "Content-Security-Policy": "default-src 'self'"
 }
