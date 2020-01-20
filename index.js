@@ -33,3 +33,21 @@ mongoose
 app.listen(app.get("port"), () => {
    console.log(`Server started`);
 });
+
+async function main() {
+   await mongoose
+      .connect(DB_URL, {
+         useNewUrlParser: true,
+         useFindAndModify: false,
+         useUnifiedTopology: true
+      })
+      .catch((err) => console.log(err));
+
+   //START SERVER
+
+   app.listen(app.get("port"), () => {
+      console.log(`Server started`);
+   });
+}
+
+main();
