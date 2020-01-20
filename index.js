@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 //ROUTES
-app.use("/api", require("../routes/contacts.route"));
+app.use("/api", require("./routes/contacts.route"));
 //STATIC FILES
 app.use("/public", express.static(path.resolve("public")));
 
