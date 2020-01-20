@@ -5,8 +5,8 @@ const path = require("path");
 const morgan = require("morgan");
 
 const app = express();
-const DB_URL = "mongodb+srv://Peppy:1234@cluster0-dpyu2.mongodb.net/test?retryWrites=true&w=majority";
-// const DB_URL = "mongodb+srv://JoseLuRu95:1234@cluster0-nwvg7.mongodb.net/test?retryWrites=true&w=majority";
+// const DB_URL = "mongodb+srv://Peppy:1234@cluster0-dpyu2.mongodb.net/test?retryWrites=true&w=majority";
+const DB_URL = "mongodb+srv://JoseLuRu95:1234@cluster0-nwvg7.mongodb.net/test?retryWrites=true&w=majority";
 
 app.set("port", process.env.PORT || 3000);
 
